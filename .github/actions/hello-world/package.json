@@ -9,8 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-
   "dependencies": {
-    "@actions/core": "^1.2.1"
+    "@actions/core": "^1.4.0"
   }
 }
