@@ -2,6 +2,7 @@ const core = require("@actions/core");
 const github = require("@actions/github");
 
 async function run() {
+    console.log(`Joke input:` + core.getInput("joke"));
     try {
         const issueTitle = core.getInput("issue-title");
         const jokeBody = core.getInput("joke");
@@ -16,12 +17,7 @@ async function run() {
             title: issueTitle,
             body: jokeBody
         });
-        // const newIssue = await octokit.issues.create({
-        //     repo: github.context.repo.repo,
-        //     owner: github.context.repo.owner,
-        //     title: issueTitle,
-        //     body: jokeBody
-       // });
+        console.log(newIssue)
     } catch (error) {
         core.setFailed(error.message);
     }
